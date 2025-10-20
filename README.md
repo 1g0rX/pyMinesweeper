@@ -1,109 +1,106 @@
-Campo Minado em Python: Manual do Usuário
+# 🧩 Minesweeper (Campo Minado) — User Manual
 
-Este documento serve como um guia completo para a instalação, execução e jogabilidade do jogo Campo Minado desenvolvido em Python.
+This is a simple guide for the installation, execution, and gameplay of the **Minesweeper** - game developed in Python and terminal-based.
 
-Índice
+---
 
-English Version
+## 📁 Index
 
-Requirements
+* [English Version](#english-version)
 
-Setup and Execution
+  * [Requirements](#requirements)
+  * [Setup and Execution](#setup-and-execution)
+  * [Game Options](#game-options)
+  * [Game Interface](#game-interface)
+  * [Final Notes](#final-notes)
+* [Versão em Português](#versão-em-português)
 
-Game Options
+  * [Requisitos](#requisitos)
+  * [Instalação e Execução](#instalação-e-execução)
+  * [Opções do Jogo](#opções-do-jogo)
+  * [Interface do Jogo](#interface-do-jogo)
+  * [Notas Finais](#notas-finais)
 
-Game Interface
+---
 
-Final Notes
+## 🇬🇧 English Version
 
-Versão em Português
+### Requirements
 
-Requisitos
+> [!NOTE]
+> Before you begin, ensure you have **Python 3** installed on your system.
+> Check by running `python --version` or `python3 --version` in your terminal.
 
-Instalação e Execução
+* **Python 3.x**
+* A **command-line terminal** to run the game.
 
-Opções do Jogo
+---
 
-Interface do Jogo
+### Setup and Execution
 
-Notas Finais
+#### Clone the repo
 
-<a name="english-version"></a>
+Clone the repo by running the following in the terminal:
 
-English Version
+```bash
+git clone https://github.com/1g0rX/pyMinesweeper.git
+cd pyMinesweeper
+```
 
-Requirements
+#### Starting the Game
 
-[!NOTE]
-Before you begin, ensure you have Python 3 installed on your system. You can check this by running python --version or python3 --version in your terminal.
+1. Run the command:
 
-Python 3.x
+   ```bash
+   python3 Minesweeper.py
+   ```
+2. The game will prompt for the board settings:
 
-A command-line terminal to run the game.
+   * Number of rows (3–10)
+   * Number of columns (3–10)
+   * Number of mines
 
-Setup and Execution
-
-Starting the Game
-
-Navigate via the terminal to the directory where the minesweeper_refactored.py file is located.
-
-Run the following command:
-
-python minesweeper_refactored.py
-
-
-The game will start and prompt you for the initial board settings (rows, columns, and number of mines).
-
-Ending the Game
+#### Ending the Game
 
 You can end the game session in three ways:
 
-Quitting: In the main menu, select option 0 and press Enter.
+* **Quitting** — select option `0` in the main menu.
+* **Winning** — when all mines are correctly marked.
+* **Losing** — when opening a cell containing a mine.
 
-Winning: The game ends automatically when you correctly mark all mine locations.
+---
 
-Losing: The game ends automatically when you open a coordinate that contains a mine.
+### Game Options
 
-Game Options
+1. **Board Configuration**
+   Define the battlefield size:
 
-The system provides the following options to the user:
+   * Rows: 3–10
+   * Columns: 3–10
+   * Mines: number of hidden bombs
 
-1. Board Configuration
+2. **In-Game Actions**
 
-When starting, you will define the size of the battlefield:
+   * `1. Mark as mine` — places an **M** marker on a suspected mine.
+   * `2. Open coordinates` — reveals a cell (if it’s a bomb, the game ends).
+   * `0. Exit` — ends the game.
 
-Number of rows: A value between 3 and 10.
+---
 
-Number of columns: A value between 3 and 10.
+### Game Interface
 
-Number of mines: The quantity of bombs to be hidden on the map.
+#### Initial Setup Screen
 
-2. In-Game Actions
-
-During each turn, the following menu will be displayed:
-
-1. Mark as mine: Allows the player to place an M marker on a coordinate where they suspect a mine exists.
-
-2. Open coordinates: Reveals the content of a cell. If it's a bomb, the game ends. Otherwise, it will display a number indicating how many mines are in the 8 neighboring squares.
-
-0. Exit: Ends the game immediately.
-
-Game Interface
-
-Initial Setup Screen
-
-The first user interaction, where the board is configured.
-
+```
 Number of lines (min 3 and max 10): 5
 Number of columns (min 3 and max 10): 5
 Number of mines: 4
 Bombs allocated!
+```
 
+#### Main Game Screen
 
-Main Game Screen
-
-The main screen, displayed each turn, showing the current state of the minesweeper field.
-
+```
    1  2  3  4  5
 1 [ ][1][ ][ ][ ]
 2 [ ][1][ ][ ][ ]
@@ -111,108 +108,112 @@ The main screen, displayed each turn, showing the current state of the minesweep
 4 [1][1][ ][ ][ ]
 5 [ ][ ][ ][ ][ ]
 
-
 1. Mark as mine
 2. Open coordinates
 0. Exit
 Option:
+```
 
+#### Defeat and Victory Screens
 
-Defeat and Victory Screens
+At the end, the full board is revealed, showing all mine locations.
 
-Upon losing or winning, the game displays the final state of the board, revealing all mine locations for review.
+---
 
-Final Notes
+### Final Notes
 
-Final Thoughts
+#### Final Thoughts
 
-This project is a functional implementation of the classic Minesweeper game, developed entirely in Python for a terminal environment. It offers a solid experience of logical challenge and deduction.
+This project is a **fully functional Minesweeper clone**, developed for a **terminal environment** in Python.
+It provides a solid **logical challenge** and encourages **deductive reasoning**.
 
-Limitations and Known Issues
+#### Limitations and Known Issues
 
-[!WARNING]
-Input Validation: The program does not handle non-numeric inputs (like letters). Providing invalid input may cause a runtime error and terminate the execution.
+> [!WARNING]
+>
+> * **Input Validation:** The program does not handle non-numeric inputs. Invalid inputs (letters, symbols) may cause a runtime error.
+> * **Text Interface:** No graphical user interface (GUI) is implemented.
+> * **Flood Fill:** Cells with `0` do not trigger automatic opening of surrounding safe cells.
 
-Text Interface: The game does not have a graphical user interface (GUI).
+---
 
-Flood Fill: The game does not implement the "flood fill" feature, where clicking on a cell with the number 0 automatically reveals all surrounding safe cells.
+## 🇧🇷 Versão em Português
 
-<a name="versão-em-português"></a>
+### Requisitos
 
-Versão em Português
+> [!NOTA]
+> Antes de começar, certifique-se de que você possui o **Python 3** instalado.
+> Verifique executando `python --version` ou `python3 --version` no terminal.
 
-Requisitos
+* **Python 3.x**
+* Um **terminal de linha de comando** para executar o jogo.
 
-[!NOTA]
-Antes de começar, certifique-se de que você tem o Python 3 instalado em seu sistema. Você pode verificar isso executando python --version ou python3 --version no seu terminal.
+---
 
-Python 3.x
+### Instalação e Execução
 
-Um terminal de linha de comando para executar o jogo.
+#### Clonando o repositório
 
-Instalação e Execução
+Clone o repositório rodando os seguintes comandos:
 
-Como Iniciar o Jogo
+```bash
+git clone https://github.com/1g0rX/pyMinesweeper.git
+cd pyMinesweeper
+```
 
-Navegue pelo terminal até o diretório onde o arquivo minesweeper_refactored.py está localizado.
+#### Como Iniciar o Jogo
 
-Execute o seguinte comando:
+1. Execute:
 
-python minesweeper_refactored.py
+   ```bash
+   python Minesweeper.py
+   ```
+2. O jogo pedirá as configurações iniciais:
 
+   * Número de linhas (3–10)
+   * Número de colunas (3–10)
+   * Número de minas
 
-O jogo será iniciado e solicitará as configurações iniciais do tabuleiro (linhas, colunas e número de minas).
+#### Como Terminar o Jogo
 
-Como Terminar o Jogo
+O jogo pode ser encerrado de três formas:
 
-Você pode terminar a execução do jogo de três maneiras:
+* **Saindo voluntariamente:** opção `0` no menu principal.
+* **Vencendo:** ao marcar corretamente todas as minas.
+* **Perdendo:** ao abrir uma célula que contém uma mina.
 
-Saindo voluntariamente: No menu principal, digite a opção 0 e pressione Enter.
+---
 
-Vencendo: O jogo termina automaticamente quando você marca corretamente a localização de todas as minas.
+### Opções do Jogo
 
-Perdendo: O jogo termina automaticamente quando você abre uma coordenada que contém uma mina.
+1. **Configuração do Tabuleiro**
 
-Opções do Jogo
+   * Linhas: 3–10
+   * Colunas: 3–10
+   * Minas: quantidade de bombas escondidas
 
-O sistema oferece as seguintes opções ao usuário:
+2. **Ações em Jogo**
 
-1. Configuração do Tabuleiro
+   * `1. Marcar como mina` — coloca um **M** onde o jogador suspeita haver uma mina.
+   * `2. Abrir coordenadas` — revela o conteúdo da célula.
+   * `0. Sair` — encerra a partida.
 
-Ao iniciar, você definirá o tamanho do campo de batalha:
+---
 
-Número de linhas: Um valor entre 3 e 10.
+### Interface do Jogo
 
-Número de colunas: Um valor entre 3 e 10.
+#### Tela de Configuração Inicial
 
-Número de minas: A quantidade de bombas que serão escondidas no mapa.
-
-2. Ações em Jogo
-
-Durante a partida, o seguinte menu será exibido a cada jogada:
-
-1. Marcar como mina: Permite que o jogador coloque um marcador M em uma coordenada onde ele suspeita que exista uma mina.
-
-2. Abrir coordenadas: Revela o conteúdo de uma célula. Se for uma bomba, o jogo acaba. Caso contrário, exibirá um número que indica quantas minas existem nos 8 quadrados vizinhos.
-
-0. Sair: Encerra o jogo imediatamente.
-
-Interface do Jogo
-
-Tela de Configuração Inicial
-
-A primeira interação do usuário, onde o tabuleiro é configurado.
-
+```
 Number of lines (min 3 and max 10): 5
 Number of columns (min 3 and max 10): 5
 Number of mines: 4
 Bombs allocated!
+```
 
+#### Tela Principal do Jogo
 
-Tela Principal do Jogo
-
-Esta é a tela principal, exibida a cada turno, mostrando o estado atual do campo minado.
-
+```
    1  2  3  4  5
 1 [ ][1][ ][ ][ ]
 2 [ ][1][ ][ ][ ]
@@ -220,28 +221,30 @@ Esta é a tela principal, exibida a cada turno, mostrando o estado atual do camp
 4 [1][1][ ][ ][ ]
 5 [ ][ ][ ][ ][ ]
 
-
 1. Mark as mine
 2. Open coordinates
 0. Exit
 Option:
+```
 
+#### Telas de Derrota e Vitória
 
-Telas de Derrota e Vitória
+Ao final, o jogo revela todas as minas no tabuleiro para conferência.
 
-Ao perder ou ganhar, o jogo exibe o estado final do tabuleiro, revelando a localização de todas as minas para conferência.
+---
 
-Notas Finais
+### Notas Finais
 
-Considerações Finais
+#### Considerações Finais
 
-Este projeto é uma implementação funcional do clássico jogo Campo Minado, desenvolvido inteiramente em Python para um ambiente de terminal. Ele oferece uma sólida experiência de desafio lógico e dedução.
+Este projeto é uma implementação funcional do **Campo Minado clássico**, totalmente em Python, para execução no terminal.
+Oferece uma experiência sólida de **desafio lógico e dedução**.
 
-Limitações e Problemas Conhecidos
+#### Limitações e Problemas Conhecidos
 
-[!AVISO]
-Validação de Entrada: O programa não trata entradas não numéricas (como letras). Fornecer uma entrada inválida pode causar um erro de execução e encerrar o programa.
+> [!AVISO]
+>
+> * **Validação de Entrada:** Entradas não numéricas podem causar erro e encerrar o programa.
+> * **Interface de Texto:** Não há interface gráfica (GUI).
+> * **Abertura em Massa (Flood Fill):** Não implementado — células com `0` não abrem as vizinhas automaticamente.
 
-Interface de Texto: O jogo não possui uma interface gráfica (GUI).
-
-Abertura em Massa (Flood Fill): O jogo não implementa a funcionalidade de "abertura em massa", onde ao clicar em uma célula com o número 0, todas as células seguras ao redor são reveladas automaticamente.
