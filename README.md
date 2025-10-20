@@ -225,3 +225,23 @@ Esta é a tela principal, exibida a cada turno, mostrando o estado atual do camp
 2. Open coordinates
 0. Exit
 Option:
+
+
+Telas de Derrota e Vitória
+
+Ao perder ou ganhar, o jogo exibe o estado final do tabuleiro, revelando a localização de todas as minas para conferência.
+
+Notas Finais
+
+Considerações Finais
+
+Este projeto é uma implementação funcional do clássico jogo Campo Minado, desenvolvido inteiramente em Python para um ambiente de terminal. Ele oferece uma sólida experiência de desafio lógico e dedução.
+
+Limitações e Problemas Conhecidos
+
+[!AVISO]
+Validação de Entrada: O programa não trata entradas não numéricas (como letras). Fornecer uma entrada inválida pode causar um erro de execução e encerrar o programa.
+
+Interface de Texto: O jogo não possui uma interface gráfica (GUI).
+
+Abertura em Massa (Flood Fill): O jogo não implementa a funcionalidade de "abertura em massa", onde ao clicar em uma célula com o número 0, todas as células seguras ao redor são reveladas automaticamente.
