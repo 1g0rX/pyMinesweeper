@@ -141,7 +141,7 @@ It provides a solid **logical challenge** and encourages **deductive reasoning**
 
 ### Requisitos
 
-> [!NOTA]
+> [!NOTE]
 > Antes de começar, certifique-se de que você possui o **Python 3** instalado.
 > Verifique executando `python --version` ou `python3 --version` no terminal.
 
@@ -242,7 +242,7 @@ Oferece uma experiência sólida de **desafio lógico e dedução**.
 
 #### Limitações e Problemas Conhecidos
 
-> [!AVISO]
+> [!WARNING]
 >
 > * **Validação de Entrada:** Entradas não numéricas podem causar erro e encerrar o programa.
 > * **Interface de Texto:** Não há interface gráfica (GUI).
