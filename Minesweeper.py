@@ -25,6 +25,7 @@ def create_map(x, y):
 
 def input_mines(x, y, mines):
     """Function that receives the number of lines, columns and also the number os mines and put the bombs in randoms places"""
+    
     for i in range(mines):
         # randint includes the first and by the last element given
         op_x = randint(0, x - 1)
@@ -74,11 +75,20 @@ def check_game_status():
     return bombs_count_total
     
 def show_map():
+    columns = len(minesweeper_map_helper[0])
+
+    print('   ', end='') # add a space to the header
+    # now, we're going to put the numbers of the columns
+    for j in range(columns):
+        print(f'{j + 1} ', end=' ') # add the numbers, starting from 1, with a space
+    print()
+
+    # now, we're going to print each line of the map, and, of course, add the number of the line too
     for i in range(len(minesweeper_map_helper)):
-        print('|', end='')
+        print(f'{i + 1} ', end='') # print the number of the line with a space
         for j in range(len(minesweeper_map_helper[0])):
-            print(minesweeper_map_helper[i][j], end='')
-        print('|')
+            print(f'[{minesweeper_map_helper[i][j]}]' , end='')
+        print()
 
 
 
