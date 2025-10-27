@@ -131,7 +131,7 @@ It provides a solid **logical challenge** and encourages **deductive reasoning**
 
 > [!WARNING]
 >
-> ~~* **Input Validation:** The program does not handle non-numeric inputs. Invalid inputs (letters, symbols) may cause a runtime error.~~
+> * ~~**Input Validation:** The program does not handle non-numeric inputs. Invalid inputs (letters, symbols) may cause a runtime error.~~
 > * **Text Interface:** No graphical user interface (GUI) is implemented.
 > * **Flood Fill:** Cells with `0` do not trigger automatic opening of surrounding safe cells.
 
@@ -244,7 +244,7 @@ Oferece uma experiência sólida de **desafio lógico e dedução**.
 
 > [!WARNING]
 >
-> ~~* **Validação de Entrada:** Entradas não numéricas podem causar erro e encerrar o programa.~~
+> * ~~**Validação de Entrada:** Entradas não numéricas podem causar erro e encerrar o programa.~~
 > * **Interface de Texto:** Não há interface gráfica (GUI).
 > * **Abertura em Massa (Flood Fill):** Não implementado — células com `0` não abrem as vizinhas automaticamente.
 
