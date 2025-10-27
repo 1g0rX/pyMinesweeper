@@ -112,7 +112,10 @@ def show_map():
 
     # now, we're going to print each line of the map, and, of course, add the number of the line too
     for i in range(len(minesweeper_map_helper)):
-        print(f'{i + 1} ', end='') # print the number of the line with a space
+        if i+1 == 10:
+            print(f'{i + 1}', end='')
+        else: 
+            print(f'{i + 1} ', end='') # print the number of the line with a space
         for j in range(len(minesweeper_map_helper[0])):
             print(f'[{minesweeper_map_helper[i][j]}]' , end='')
         print()
@@ -131,7 +134,10 @@ def show_real_map():
 
     # now, we're going to print each line of the map, and, of course, add the number of the line too
     for i in range(len(minesweeper_map)):
-        print(f'{i + 1} ', end='') # print the number of the line with a space
+        if i+1 == 10:
+            print(f'{i + 1}', end='')
+        else: 
+            print(f'{i + 1} ', end='') # print the number of the line with a space
         for j in range(len(minesweeper_map[0])):
             print(f'[{minesweeper_map[i][j]}]' , end='')
         print()
@@ -177,15 +183,41 @@ while True:
         
         case 1: 
             print('Mark as mine: ')
-            line = int(input('\t line: '))
-            column = int(input('\tColumn: '))
+            line = input('\t line: ')
+            while True:
+                if line.isnumeric():
+                    line = int(line)
+                    break
+                else:
+                    line = input('\t line: ')
+
+            column = input('\tColumn: ')
+            while True:
+                if column.isnumeric():
+                    column = int(column)
+                    break
+                else: 
+                    column = input('\tColumn: ')
 
             count = mark_as_mine(line - 1, column - 1) # remove 1 to be user-index 1 and game-index 0
         
         case 2:
             print('Open coordinates: ')
-            line = int(input('\tline: '))
-            column = int(input('\tColumn: '))
+            line = input('\t line: ')
+            while True:
+                if line.isnumeric():
+                    line = int(line)
+                    break
+                else:
+                    line = input('\t line: ')
+
+            column = input('\tColumn: ')
+            while True:
+                if column.isnumeric():
+                    column = int(column)
+                    break
+                else: 
+                    column = input('\tColumn: ')
 
             if not open_position(line - 1, column - 1):
                 break
